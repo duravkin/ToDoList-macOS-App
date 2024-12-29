@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7724715B2D21E6000005260E /* PriorityItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7724715A2D21E6000005260E /* PriorityItem.swift */; };
 		77B9EAE72D1AE40E0035B883 /* myToDoListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B9EAE62D1AE40E0035B883 /* myToDoListApp.swift */; };
 		77B9EAE92D1AE40E0035B883 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B9EAE82D1AE40E0035B883 /* ContentView.swift */; };
 		77B9EAEB2D1AE4110035B883 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77B9EAEA2D1AE4110035B883 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7724715A2D21E6000005260E /* PriorityItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityItem.swift; sourceTree = "<group>"; };
 		77B9EAE32D1AE40E0035B883 /* myToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77B9EAE62D1AE40E0035B883 /* myToDoListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myToDoListApp.swift; sourceTree = "<group>"; };
 		77B9EAE82D1AE40E0035B883 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				77B9EAEA2D1AE4110035B883 /* Assets.xcassets */,
 				77B9EAEF2D1AE4110035B883 /* myToDoList.entitlements */,
 				77B9EAEC2D1AE4110035B883 /* Preview Content */,
+				7724715A2D21E6000005260E /* PriorityItem.swift */,
 			);
 			path = myToDoList;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 				77B9EAE92D1AE40E0035B883 /* ContentView.swift in Sources */,
 				77B9EAE72D1AE40E0035B883 /* myToDoListApp.swift in Sources */,
 				77B9EAF92D1AF88D0035B883 /* ToDoItem.swift in Sources */,
+				7724715B2D21E6000005260E /* PriorityItem.swift in Sources */,
 				77B9EAFB2D1AFB510035B883 /* CoreDataManager.swift in Sources */,
 				77B9EAF72D1AEF4B0035B883 /* ToDoModel.xcdatamodeld in Sources */,
 			);

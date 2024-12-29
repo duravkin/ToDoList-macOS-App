@@ -11,6 +11,7 @@ class CoreDataManager {
             if let error = error {
                 fatalError("Core Data failed to initialize: \(error.localizedDescription)")
             }
+            self.createDefaultPriorities() // Создаём приоритеты по умолчанию при загрузке
         }
     }
 
@@ -22,6 +23,34 @@ class CoreDataManager {
             } catch {
                 print("Failed to save Core Data: \(error)")
             }
+        }
+    }
+
+    private func createDefaultPriorities() {
+        let context = container.viewContext
+
+        let request: NSFetchRequest<PriorityEntity> = PriorityEntity.fetchRequest()
+
+        do {
+            let count = try context.count(for: request)
+            if count == 0 {
+                let highPriority = PriorityEntity(context: context)
+                highPriority.id = UUID()
+                highPriority.priority = "High"
+
+                let mediumPriority = PriorityEntity(context: context)
+                mediumPriority.id = UUID()
+                mediumPriority.priority = "Medium"
+
+                let lowPriority = PriorityEntity(context: context)
+                lowPriority.id = UUID()
+                lowPriority.priority = "Low"
+
+                saveContext()
+                print("Default priorities created.")
+            }
+        } catch {
+            print("Failed to check or create default priorities: \(error)")
         }
     }
 }
