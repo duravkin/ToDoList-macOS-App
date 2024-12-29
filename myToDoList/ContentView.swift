@@ -72,11 +72,12 @@ struct ContentView: View {
                             Text(item.title)
                                 .strikethrough(item.isCompleted, color: .gray)
                             Spacer()
-//                            Text(item.priority ?? "No priority")
+//                            Text("\(item.priorityID)")
+                            Text("\(viewModel.priorities.first(where: { $0.id == item.priorityID })?.priority ?? "NULL")")
                             Button(action: {
                                 editingItem = item
                                 editedTaskTitle = item.title
-                                editedTaskPriorityID = viewModel.priorities.first(where: { $0.id == item.id })?.id
+                                editedTaskPriorityID = viewModel.priorities.first(where: { $0.id == item.priorityID })?.id
                             }) {
                                 Image(systemName: "pencil")
                                     .foregroundColor(.blue)

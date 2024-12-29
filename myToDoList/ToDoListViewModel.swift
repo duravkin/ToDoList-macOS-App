@@ -15,7 +15,7 @@ class ToDoListViewModel: ObservableObject {
     func fetchItems() {
         let request: NSFetchRequest<ToDoEntity> = ToDoEntity.fetchRequest()
         
-        let prioritySortDescriptor = NSSortDescriptor(key: "priority.priority", ascending: true)
+        let prioritySortDescriptor = NSSortDescriptor(key: "priority.priority", ascending: false)
         let completionSortDescriptor = NSSortDescriptor(key: "isCompleted", ascending: true)
         let dateSortDescriptor = NSSortDescriptor(key: "creationDate", ascending: false)
         request.sortDescriptors = [prioritySortDescriptor, completionSortDescriptor, dateSortDescriptor]
@@ -27,7 +27,8 @@ class ToDoListViewModel: ObservableObject {
                     id: entity.id!,
                     title: entity.title!,
                     isCompleted: entity.isCompleted,
-                    creationDate: entity.creationDate ?? Date()
+                    creationDate: entity.creationDate ?? Date(),
+                    priorityID: entity.priority?.id ?? UUID()
                 )
             }
         } catch {
